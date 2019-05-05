@@ -91,7 +91,6 @@ async function PollingMovingAverageStrategy()
 
 
 main( PollingMovingAverageStrategy );
-// main( MovingAverageIndicatorsLogicAsync );
 
 
 

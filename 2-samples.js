@@ -51,3 +51,5 @@ async function MarketOrdersLogicAsync()
 	await Exchange.MarketSellBitcoinAsync(1);
 }
 
+
+main( MovingAverageIndicatorsLogicAsync );
