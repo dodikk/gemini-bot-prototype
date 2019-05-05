@@ -1,0 +1,20 @@
+{
+  "name": "gemini-learn",
+  "version": "0.0.1",
+  "description": "Test assignment for ivan academy course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dodikk",
+  "license": "MIT",
+  "dependencies": {
+    "async-main": "^1.0.2",
+    "cryptocompare": "^1.0.0",
+    "gemini-api": "^2.0.4",
+    "jslint": "^0.12.1",
+    "json-beautify": "^1.1.0",
+    "node-fetch": "^2.5.0",
+    "yarn": "^1.15.2"
+  }
+}
