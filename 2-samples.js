@@ -53,3 +53,41 @@ async function MarketOrdersLogicAsync()
 
 
 main( MovingAverageIndicatorsLogicAsync );
+
+
+
+
+/*
+const orderDto = 
+{
+	amount: 10,
+	price: 100,
+	side: "buy",
+	symbol: "btcusd"
+};
+
+async function PlaceOrderAsync()
+{
+	try
+	{
+		// const prices = 
+		// 	await CryptoCompareAPI.priceHistorical(
+		// 		"BTC",
+		// 		 ["USD, EUR", "UAH"],
+		// 		 new Date(2017, 1, 1));
+		// console.log('prices : ' + Logger.JsonBeautifyDefault(prices));
+
+
+		var response = await restClient.newOrder(orderDto)
+		console.log(Logger.JsonBeautifyDefault(response));
+
+		await restClient.cancelOrder(response);
+	}
+	catch (error)
+	{
+		console.log(error);
+	}
+}
+*/
+
+

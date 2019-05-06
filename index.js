@@ -10,14 +10,20 @@ var hasPosition = false;
 
 async function MovingAverageStrategyTick()
 {
-	const btcPrice = await Exchange.GetBitcoinPriceAsync();
-	const movingAverage100Min = 
-		await Indicators.MinutelyMovingAverageAsync(
+	const indicators = await Promise.all(
+	[
+		  Exchange.GetBitcoinPriceAsync()
+
+		, Indicators.MinutelyMovingAverageAsync(
 			/*cryptoAsset:*/ "BTC",
 			/*currency:*/ "USD",
 			/*hours:*/ 100,
 			/*currentElementIndex:*/ 0
-		);
+		)
+	]);
+
+	const btcPrice = indicators[0];
+	const movingAverage100Min = indicators[1];
 
 
 	const isPriceCrossedUnderAverage = 

@@ -49,11 +49,13 @@ async function ExecAssignmentLogicAsync()
 		const orders = GenerateOrders();
 		console.log('generated orders : ' + Logger.JsonBeautifyDefault(orders));
 
+		var fetchOrderPromises = [];
 		for (i = 0; i < ORDERS_COUNT; i++)
 		{
-			// TODO: maybe run in parallel and apply map/reduce 
-			await restClient.newOrder(orders[i]);
+			const singlePromise = restClient.newOrder(orders[i]);
+			fetchOrderPromises.push(singlePromise);
 		}
+		await Promise.all(fetchOrderPromises);
 
 		var activeOrders = await restClient.getMyActiveOrders();
 		console.log('active orders : ' + Logger.JsonBeautifyDefault(activeOrders));
